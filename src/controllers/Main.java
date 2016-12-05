@@ -3,8 +3,6 @@ package controllers;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
@@ -17,7 +15,7 @@ public class Main {
 
 	@RequestMapping("/")
 	public String home(@RequestHeader(value = "Accept-Language") String acceptLanguage,
-			@RequestHeader(value = "User-Agent") String userAgent, HttpServletResponse response, Model model) {
+			@RequestHeader(value = "User-Agent") String userAgent, Model model) {
 
 		InetAddress ip = null;
 		try {
